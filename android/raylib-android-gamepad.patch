@@ -1,0 +1,29 @@
+--- /tmp/rcore_android.c.orig	2026-08-17 07:07:26.412288336 +0100
++++ src/platforms/rcore_android.c	2026-08-17 07:07:26.422604434 +0100
+@@ -1276,17 +1276,21 @@
+         // Handle gamepad button presses and releases
+         // NOTE: Skip gamepad handling if this is a keyboard event, as some devices
+         // report both AINPUT_SOURCE_KEYBOARD and AINPUT_SOURCE_GAMEPAD flags
++        // NOTE: Handhelds such as the Retroid report their pad buttons with
++        // BOTH the gamepad and keyboard source flags set.  Rejecting those
++        // outright leaves every face button invisible, because the keyboard
++        // path has no mapping for AKEYCODE_BUTTON_*.  Decide on the KEYCODE
++        // instead: if it translates to a real gamepad button, treat it as
++        // one; anything else still falls through to the keyboard.
++        GamepadButton button = AndroidTranslateGamepadButton(keycode);
++
+         if ((FLAG_IS_SET(source, AINPUT_SOURCE_JOYSTICK) ||
+              FLAG_IS_SET(source, AINPUT_SOURCE_GAMEPAD)) &&
+-            !FLAG_IS_SET(source, AINPUT_SOURCE_KEYBOARD))
++            (button != GAMEPAD_BUTTON_UNKNOWN))
+         {
+             // Assuming a single gamepad, "detected" on its input event
+             CORE.Input.Gamepad.ready[0] = true;
+ 
+-            GamepadButton button = AndroidTranslateGamepadButton(keycode);
+-
+-            if (button == GAMEPAD_BUTTON_UNKNOWN) return 1;
+-
+             if (AKeyEvent_getAction(event) == AKEY_EVENT_ACTION_DOWN)
+             {
+                 CORE.Input.Gamepad.currentButtonState[0][button] = 1;

@@ -43,19 +43,22 @@ against the loader's *own* dispatch table, all fifteen entries.
 
 ## Controls
 
-| | |
-| --- | --- |
-| Move / fire | stick or d-pad, **A** or **RB** |
-| Second button | **B** |
-| Action keys | **X** (SPACE), **Y** (RETURN) |
-| Pause | **P**, or **START** |
-| Alternative soundtrack | **L1**, or **F2** |
-| Capture a frame + RAM + registers | **F12** |
-| Nudge playfield vs sprites | `[` `]`, `\` resets |
+| action | pad | keyboard |
+| --- | --- | --- |
+| Move | stick or d-pad | arrows or WASD |
+| Fire | **A** | Ctrl or Z |
+| Special | **B** | Shift or X |
+| Split | **Y** | Return |
+| Config screen | **SELECT** | Space |
+| Pause | **START** | P |
+| Capture frame + RAM + registers | — | F12 |
 
-Keyboard: arrows or WASD to move, Ctrl or Z to fire, Shift or X for the second
-button. SPACE and RETURN are left free because the game's two extra actions
-*are* those keys — it never reads POTGOR.
+The config screen is the game's own: number of ships, enemy bullet speed, time
+between bullets, expansion timings. It is easy to miss — the original opens it
+with SPACE from the title.
+
+The game's two extra actions genuinely *are* keys: it never reads POTGOR, and
+it takes a second joystick button as a POT0DAT change instead.
 
 ## The chipset
 
@@ -97,6 +100,10 @@ Musashi is vendored in `third_party/musashi` (MIT, Karl Stenerud).
 Boots, plays, and renders the title, attract, demo, high scores and credits.
 Sound works — Hybris drives its music from a CIA-B timer at level 6.
 
-Known open ends: the graphics storage format is not yet cracked, so the
-artwork can be located but not yet rewritten; and the fire cadence is fixed at
-one shot per 24 frames by the game itself, which no input pattern changes.
+The sprite format is cracked — five planes, each padded to 128 bytes, the
+fifth an inverted mask — so artwork can be ripped and replaced; see
+`assets/sprites/README.md`.
+
+Known open ends: the fire cadence is fixed at one shot per 24 frames by the
+game itself, which no input pattern changes; and the formation enemies have
+not been identified for remastering.

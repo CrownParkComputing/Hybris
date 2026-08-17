@@ -38,7 +38,6 @@ The display is a full PAL raster at 352×288, presented at 4:3 because an Amiga 
 
 - Boots from files — no ADF, no WHDLoad slave, nothing to configure
 - Full controller support, hot-plugged, plus keyboard
-- Pause, and an alternative soundtrack you can switch to mid-game
 - Screenshot-and-state capture on F12
 - Runs at a locked PAL 50Hz
 
@@ -51,7 +50,6 @@ The display is a full PAL raster at 352×288, presented at 4:3 because an Amiga 
 | Second button | B | Shift |
 | Actions | X, Y | Space, Return |
 | Pause | START | P |
-| Swap soundtrack | L1 | F2 |
 
 ### Install
 
