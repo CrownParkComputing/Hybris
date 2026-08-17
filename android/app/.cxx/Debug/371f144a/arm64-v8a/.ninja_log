@@ -1,0 +1,22 @@
+# ninja log v7
+4	86	1786944793893112793	CMakeFiles/main.dir/home/jon/Hybris/src/host/exeboot.c.o	240255aaf4ec5d7
+4	96	1786944793894127633	CMakeFiles/main.dir/home/jon/Hybris/src/host/hybris_files.c.o	78574d0e402f5e57
+3	119	1786944793893005892	CMakeFiles/main.dir/home/jon/Hybris/src/host/hunk.c.o	957a75f1e98fa9a6
+3	145	1786944793892819211	CMakeFiles/main.dir/home/jon/Hybris/src/host/whdload.c.o	23274be699e844b3
+5	159	1786944793895208427	CMakeFiles/main.dir/home/jon/Hybris/src/host/hybris_loader.c.o	c7a713c8ef4f3800
+3	170	1786944793892527692	CMakeFiles/main.dir/home/jon/Hybris/src/host/pad.c.o	77951cbf1e62fa77
+2	186	1786944793892186120	raylib/raylib/CMakeFiles/raylib.dir/home/jon/Android/Sdk/ndk/26.1.10909125/sources/android/native_app_glue/android_native_app_glue.c.o	c4b143b67f343138
+3	227	1786944793892343606	CMakeFiles/main.dir/home/jon/Hybris/src/host/hybris_play.c.o	199667cb039158e4
+2	291	1786944793891731204	raylib/raylib/CMakeFiles/raylib.dir/rshapes.c.o	b26bbaef73c05176
+2	418	1786944793891858072	raylib/raylib/CMakeFiles/raylib.dir/rtext.c.o	7516b122a68948ba
+3	558	1786944793892676002	CMakeFiles/main.dir/home/jon/Hybris/src/host/amiga.c.o	69cbc005d8460022
+6	577	1786944793896279792	CMakeFiles/main.dir/home/jon/Hybris/third_party/musashi/m68kcpu.c.o	62d4f6cdc362c75d
+9	693	1786944793898112827	CMakeFiles/main.dir/home/jon/Hybris/third_party/musashi/m68kdasm.c.o	918f06ac5f6b9f7f
+2	750	1786944793891112780	raylib/raylib/CMakeFiles/raylib.dir/rcore.c.o	de15ef32c9a0f489
+86	1073	1786944793975707607	CMakeFiles/main.dir/home/jon/Hybris/third_party/musashi/softfloat/softfloat.c.o	3f904bc368427f69
+2	1292	1786944793891596630	raylib/raylib/CMakeFiles/raylib.dir/rmodels.c.o	840bcc62814ab2e2
+2	1808	1786944793891999979	raylib/raylib/CMakeFiles/raylib.dir/rtextures.c.o	f9ab7637ef1561c0
+1	2113	1786944793890112773	raylib/raylib/CMakeFiles/raylib.dir/raudio.c.o	3f53c18f2bb3b02a
+2114	2174	1786944796003126834	raylib/raylib/libraylib.a	cdd748a60b97ea04
+8	4283	1786944793897112820	CMakeFiles/main.dir/home/jon/Hybris/third_party/musashi/m68kops.c.o	47463e401e3d094d
+4284	4324	1786944798173141290	/home/jon/Hybris/android/app/build/intermediates/cxx/Debug/371f144a/obj/arm64-v8a/libmain.so	9e9b272309302afe
